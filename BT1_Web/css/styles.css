@@ -1,0 +1,25 @@
+.album-cover{
+  height: 332px;
+  margin-bottom: 20px;
+  border: 5px solid pink;
+}
+
+.album-cover img{
+  width: 100%;
+  height: 100%;
+}
+
+.photo{
+  height: 332px;
+  margin: 10px;
+}
+
+.photo img{
+  width: 100%;
+  height: 100%;
+}
+
+.single-photo img{
+  width: 100%;
+  height: 100%;
+}
