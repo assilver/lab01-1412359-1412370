@@ -3,7 +3,37 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under the MIT license
  */
+ 
+ /*Thử nghiệm sidebar*/
+ $(document).ready(function () {
+   var trigger = $('.hamburger'),
+       overlay = $('.overlay'),
+      isClosed = false;
 
+     trigger.click(function () {
+       hamburger_cross();
+     });
+
+     function hamburger_cross() {
+
+       if (isClosed == true) {
+         overlay.hide();
+         trigger.removeClass('is-open');
+         trigger.addClass('is-closed');
+         isClosed = false;
+       } else {
+         overlay.show();
+         trigger.removeClass('is-closed');
+         trigger.addClass('is-open');
+         isClosed = true;
+       }
+   }
+
+   $('[data-toggle="offcanvas"]').click(function () {
+         $('#wrapper').toggleClass('toggled');
+   });
+ });
+/*Phần code gốc*/
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
 }
